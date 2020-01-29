@@ -1,0 +1,26 @@
+{
+  "name": "jquery.accordion",
+  "version": "1.0.0",
+  "description": "jQuery plugin to create accordions",
+  "main": "jquery.accordion.js",
+  "scripts": {
+    "build": "uglifyjs --compress --mangle -o dist/jquery-accordion.min.js -- src/jquery-accordion.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dali-rajab/jQuery-Accordion.git"
+  },
+  "keywords": [
+    "jQuery",
+    "accordion"
+  ],
+  "author": "Mohamed Ali Rajab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dali-rajab/jQuery-Accordion/issues"
+  },
+  "homepage": "https://github.com/dali-rajab/jQuery-Accordion#readme",
+  "devDependencies": {
+    "uglify-js": "^3.7.6"
+  }
+}

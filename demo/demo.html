@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>jQuery accordion</title>
+	<style>
+		body {
+		    font-size: 1.5rem;
+		    margin: 20px;
+		}
+		#my-accordion {
+		    max-width:1000px;
+		    margin: auto;
+		}
+		.toggler {
+		    color: #fff;
+		    text-decoration: none;
+		    background-color: #009e6f;
+		    border-radius: 5px;
+		    padding: 5px 20px;
+		    display: block;
+		    margin-bottom: 5px;
+		}
+		.collapsible {
+		    background-color: #b7e7e7;
+		    margin-bottom:10px;
+		    padding: 15px;
+		    border-radius: 5px;
+		}
+		#button-wrap {
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		#button {
+		    text-decoration: none;
+		    background: #007eff;
+		    color: #fff;
+		    padding: 5px 20px;
+		    border-radius: 10px;
+		    box-shadow: 1px 1px 2px #0004a9;
+		}
+		#button:hover {
+		    background: #6fb6ff;
+		}
+		.jquery-accordion .toggler:hover {
+			background-color: #33CeAf;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="button-wrap">
+		<a id="button" href="#">Activate accordion</a>
+	</div>
+
+	<div id="my-accordion">
+		<a href="#" class="toggler">Lorem ipsum dolor sit.</a>
+		<div class="collapsible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit accusantium quis ad, ea necessitatibus fuga a aperiam. Porro, fuga, non.</div>
+		<a href="#" class="toggler">Rem illum quae repellendus.</a>
+		<div class="collapsible">Eligendi, fugiat? Porro, veritatis molestiae totam tempora earum in quia voluptatum officiis, cum impedit vel ipsa veniam maxime fugit possimus?</div>
+		<a href="#" class="toggler">Velit assumenda provident est.</a>
+		<div class="collapsible">Quis quia suscipit omnis quibusdam impedit doloremque deserunt obcaecati magni eos, vero iste necessitatibus laborum quaerat incidunt delectus, expedita commodi?</div>
+		<a href="#" class="toggler">Aliquam unde est dignissimos.</a>
+		<div class="collapsible">In mollitia, beatae aperiam adipisci, accusamus vel reiciendis nisi aut eum nobis quod voluptate, sint repudiandae modi consequatur tempore! Nam!</div>
+		<a href="#" class="toggler">Fuga magnam numquam eum.</a>
+		<div class="collapsible">Ut doloremque placeat aliquam, facere saepe illo atque a, amet laboriosam fugit ipsum, debitis enim voluptatum officiis. Laborum, sed, sapiente!</div>
+	</div>
+
+	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../dist/jquery-accordion.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#button").on('click', function(event) {
+				event.preventDefault();
+				if (!$("#my-accordion").hasClass('jquery-accordion')) {
+					$("#my-accordion").accordion();
+					$(this).text("Deactivate accordion");
+				} else {
+					$("#my-accordion").accordion('destroy');
+					$(this).text("Activate accordion");
+				}
+			});
+		});
+	</script>
+</body>
+</html>
