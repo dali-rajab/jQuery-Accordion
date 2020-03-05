@@ -1,5 +1,5 @@
 /*
- *  jQuery accordion - v1.0.0
+ *  jQuery accordion - v1.0.1
  *  jQuery plugin to create accordions
  *  https://github.com/dali-rajab/jQuery-Accordion
  *
@@ -64,7 +64,7 @@
 				var togglers = this.settings.togglers;
 				var activatedAccordionClass = this.settings.activatedAccordionClass;
 
-				$( this.element ).find(collapsibles).show().removeClass('accordion-show');
+				$( this.element ).find(collapsibles).css('display', '').removeClass('accordion-show');
 				$( this.element ).find(togglers).off("click", this.togglersLogic);
 
                 $( this.element ).removeClass(activatedAccordionClass).removeData( "plugin_" + pluginName );
